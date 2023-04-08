@@ -1,8 +1,4 @@
-#username - complete info
-#id1      - complete info 
-#name1    - complete info 
-#id2      - complete info
-#name2    - complete info  
+# Authors: Afik Ben Shimol and Dor Liberman
 
 import random
 
@@ -1137,12 +1133,14 @@ class AVLTreeList(object):
 		
 		# handle case original or given lists are empty
 		if lst.size == 0:
-			return absDiff
+			if self.size == 0:
+				return 0
+			return self.root.getHeight()
 		if self.size == 0:
 			self.root = lst.root
 			self.size = lst.size
 			self.updatePointers()
-			return absDiff
+			return self.root.getHeight()
 
 
 		if self.root.getHeight() >= lst.root.getHeight():

@@ -27,4 +27,4 @@ yarn-error.log*
 .vscode/settings.json
 __pycache__
 debug.py
-theoretical_part.ipynb
+info.txt
